@@ -17,7 +17,7 @@ class App{
 	
 	public function run(){
 		if( array_key_exists($this->url[0], $this->routes)
-		    && $this->routes[$this->url[0]] instanceof Closure
+			&& $this->routes[$this->url[0]] instanceof Closure
 			&& is_callable($this->routes[$this->url[0]])){
 			call_user_func($this->routes[$this->url[0]]);
 		}
