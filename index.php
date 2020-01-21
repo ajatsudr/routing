@@ -1,11 +1,11 @@
-<?php
+<?php 
 
-require_once 'Modules/Http/Route.php';
-require_once 'Modules/Http/Router.php';
-require_once 'Modules/Http/Request.php';
+require_once 'App.php';
 
-require_once 'Modules/Library/Database.php';
-require_once 'Modules/Library/Template.php';
-require_once 'Modules/Library/Helper.php';
+$app = new App();
 
-new \Modules\Http\Request();
+$app->add('about', function() use (&$app){
+	echo $app->url[0];
+});
+
+$app->run();
