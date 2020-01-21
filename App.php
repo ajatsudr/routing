@@ -7,8 +7,8 @@ class App{
 	
 	public function __construct(){
 		$this->url = isset($_GET['url']) ? $_GET['url'] : 'home';
-        $this->url = rtrim($this->url, '/');
-        $this->url = explode('/', $this->url);
+		$this->url = rtrim($this->url, '/');
+		$this->url = explode('/', $this->url);
 	}
 	
 	public function add($route, Closure $callback){
